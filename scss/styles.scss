@@ -1,1 +1,10 @@
-@import "large";
+@import "reset";
+@import "variables";
+@import "small-default";
+@media only screen and (min-width: 560px) {
+	@import "medium";
+}
+
+@media only screen and (min-width: 1140px) {
+	@import "large";
+}
