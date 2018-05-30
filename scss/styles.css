@@ -5,18 +5,75 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,18 +85,31 @@ time, mark, audio, video {
 body {
   line-height: 1; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
   display: block; }
 
 nav ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none; }
 
@@ -66,7 +136,8 @@ mark {
 del {
   text-decoration: line-through; }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted;
   cursor: help; }
 
@@ -83,7 +154,8 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-input, select {
+input,
+select {
   vertical-align: middle; }
 
 html {
@@ -102,10 +174,23 @@ body {
   font-size: 16px; }
 
 /* ---------------- HEADER ----------------- */
+div#headerWrapper {
+  background-color: #66000a; }
+
 header {
-  background-color: #424e64;
-  color: #bbc2ca;
+  color: #ccccb8;
   padding: 1rem 2%; }
+  header form {
+    float: right; }
+  header form input {
+    width: 6rem;
+    border-radius: 10px;
+    margin-right: 2%;
+    padding: .2rem;
+    border: none;
+    transition: width .5s; }
+  header form input:focus {
+    width: 8rem; }
 
 h1 {
   font-size: 2rem;
@@ -117,7 +202,7 @@ h2 {
 
 /* ---------------- NAVIGATION ----------------- */
 nav {
-  background-color: #bbc2ca;
+  background-color: #ccccb8;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
   nav ul li {
     float: left;
@@ -130,14 +215,14 @@ nav {
     text-align: center;
     font-weight: 700;
     padding: .5rem 0;
-    color: #424e64;
+    color: #66000a;
     text-decoration: none;
     transition: background .75s ease, color .75s ease; }
   nav ul li.active a {
-    background-color: #9ea8b4; }
+    background-color: #b7b79a; }
   nav ul li a:hover {
-    color: #bbc2ca;
-    background-color: #424e64; }
+    color: #ccccb8;
+    background-color: #66000a; }
 
 /* ---------------- MAIN --------------- */
 main figure.banner {
@@ -147,7 +232,17 @@ main figure.banner img {
 main h1 {
   font-size: 2rem;
   margin: 1rem 0 0 2%;
-  color: #424e64; }
+  color: #66000a; }
+main h2 {
+  font-size: 1.2rem;
+  margin: 0.75rem 0 0 2%;
+  color: #99000f; }
+main h3 {
+  font-size: 1.2rem;
+  color: #cc0014; }
+main p {
+  line-height: 130%;
+  color: #331912; }
 main hr.fadeAway {
   background: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
   height: 2px;
@@ -155,24 +250,45 @@ main hr.fadeAway {
   margin: 0 2%; }
 main figure.photo {
   width: 96%;
-  margin: .5rem; }
+  margin: 0.5rem 2%; }
 main figure.photo img {
   width: 100%; }
 main figure.photo figcaption {
   text-align: center;
-  color: #424e64; }
+  color: #66000a; }
+main div.blog article {
+  margin: 0.5rem 2%;
+  width: 96%; }
+main div.pop {
+  background-color: #8c8c38;
+  text-align: center;
+  clear: both;
+  padding: 1rem 0; }
+  main div.pop .title {
+    font-size: 2.5rem; }
+  main div.pop .subtitle {
+    font-size: 2rem;
+    font-weight: 700; }
+  main div.pop .copy {
+    padding: .5rem 0; }
+  main div.pop .copy span {
+    font-size: 3rem;
+    color: #66000a;
+    font-weight: 700; }
 
 /* ---------------- FOOTER --------------- */
+div#footerWrapper {
+  background-color: #66000a; }
+
 footer {
-  width: 100%;
-  background-color: #424e64; }
+  width: 100%; }
   footer p {
     text-align: center;
-    color: #bbc2ca;
+    color: #ccccb8;
     padding: .75rem 0;
     font-size: .9rem; }
   footer p a {
-    color: #bbc2ca; }
+    color: #ccccb8; }
 
 /* ---------------- Clearfix: Force an Element not to collapse ----------------- */
 .clearfix:after {
@@ -180,12 +296,29 @@ footer {
   display: table;
   clear: both; }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 35rem) {
   /* -------------------- MAIN ----------------- */
   main figure.photo {
     width: 46%;
-    float: left; } }
-@media only screen and (min-width: 1140px) {
+    float: left; }
+  main div.blog article {
+    float: left;
+    width: 46%; }
+  main div.blog article:nth-child(2n+1) {
+    clear: left; } }
+@media only screen and (min-width: 60rem) {
+  /* -------------------- BODY ----------------- */
+  header,
+  nav,
+  main,
+  footer {
+    max-width: 60rem;
+    margin: 0 auto; }
+
+  body {
+    background: url(../images/Ewa.JPG) no-repeat center top;
+    background: url(../images/i.jpg) no-repeat right top; }
+
   /* -------------------- NAVIGATION ----------------- */
   nav ul {
     margin-left: 2%;
@@ -200,6 +333,16 @@ footer {
   /* -------------------- MAIN ----------------- */
   main figure.photo {
     width: 21%;
-    float: left; } }
+    float: left; }
+  main div.blog article {
+    float: left;
+    width: 29.33%; }
+  main div.blog article:nth-child(2n+1) {
+    clear: none; }
+  main div.blog article:nth-child(3n+1) {
+    clear: left; }
+  main section {
+    max-width: 60rem;
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=styles.css.map */

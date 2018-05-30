@@ -19,10 +19,28 @@ body {
 
 /* ---------------- HEADER ----------------- */
 
-header {
+div#headerWrapper {
 	background-color: $primaryColor;
+}
+
+header {
+
 	color: $secondaryColor;
 	padding: 1rem $gutter;
+	form {
+		float: right;
+	}
+	form input {
+		width: 6rem;
+		border-radius: 10px;
+		margin-right: 2%;
+		padding: .2rem;
+		border: none;
+		transition: width .5s;
+	}
+	form input:focus {
+		width: 8rem;
+	}
 }
 
 h1 {
@@ -82,19 +100,19 @@ main {
 		margin: 1rem 0 0 $gutter;
 		color: $primaryColor;
 	}
-    h2 {
-        font-size: 1.2rem;
-        margin: .75rem 0 0 $gutter;
-        color: lighten($primaryColor, 10%);
-    }
-    h3 {
-        font-size: 1.2rem;
-        color: lighten($primaryColor, 20%);
-    }
-    p {
-        line-height: 130%;
-        color: $fontColor;
-    }
+	h2 {
+		font-size: 1.2rem;
+		margin: .75rem 0 0 $gutter;
+		color: lighten($primaryColor, 10%);
+	}
+	h3 {
+		font-size: 1.2rem;
+		color: lighten($primaryColor, 20%);
+	}
+	p {
+		line-height: 130%;
+		color: $fontColor;
+	}
 	hr.fadeAway {
 		background: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
 		height: 2px;
@@ -113,17 +131,42 @@ main {
 		text-align: center;
 		color: $primaryColor;
 	}
-    div.blog article {
-        margin: .5rem $gutter;
-        width: 100%-$gutterdbl;
-    }
+	div.blog article {
+		margin: .5rem $gutter;
+		width: 100%-$gutterdbl;
+	}
+	div.pop {
+		background-color: $accent;
+		text-align: center;
+		clear: both;
+		padding: 1rem 0;
+		.title {
+			font-size: 2.5rem;
+		}
+		.subtitle {
+			font-size: 2rem;
+			font-weight: $boldWeight;
+		}
+		.copy {
+			padding: .5rem 0;
+		}
+		.copy span {
+			font-size: 3rem;
+			color: $primaryColor;
+			font-weight: $boldWeight;
+		}
+	}
 }
 
 /* ---------------- FOOTER --------------- */
 
+div#footerWrapper {
+	background-color: $primaryColor;
+}
+
 footer {
 	width: 100%;
-	background-color: $primaryColor;
+
 	p {
 		text-align: center;
 		color: $secondaryColor;
